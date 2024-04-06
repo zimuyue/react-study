@@ -1,0 +1,40 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+h1,
+p {
+  margin: 0;
+  font-weight: normal;
+}
+
+.modal {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  box-shadow: 1px 3px 5px #999;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modalHeader {
+  height: 44px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  line-height: 44px;
+  background-color: orange;
+}
+
+.modalHeader h1 {
+  font-size: 16px;
+}
+
+.modalContent {
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
