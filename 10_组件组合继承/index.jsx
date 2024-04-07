@@ -31,7 +31,7 @@ function Modal (props) {
         { props.children }
       </div>
     </div>
-  );
+  )
 }
 
 function Alert (props) {
@@ -39,7 +39,7 @@ function Alert (props) {
     <Modal headerTitle={ props.headerTitle }>
       <p>{ props.alertText }</p>
     </Modal>
-  );
+  )
 }
 
 function LoginModal (props) {
@@ -57,7 +57,7 @@ function LoginModal (props) {
         </p>
       </form>
     </Modal>
-  );
+  )
 }
 
 function WelcomeAlert () {
@@ -66,7 +66,7 @@ function WelcomeAlert () {
        headerTitle="欢迎您，亲爱的用户"
        alertText="您是我们最尊贵的用户，您将会体验到不一样的服务！"
     />
-  );
+  )
 }
 
 function App () {

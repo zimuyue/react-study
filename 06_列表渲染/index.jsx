@@ -65,7 +65,7 @@ class ListItem extends React.Component {
   render () {
     console.log(this.props.key);
     const { name, sid } = this.props;
-    return <li>{ sid + ' ' + name }</li>;
+    return <li>{ sid + ' ' + name }</li>
   }
 }
 

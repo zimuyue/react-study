@@ -34,7 +34,7 @@ class Title extends React.Component {
 
   render () {
     return (
-      <h1 className="title">{ this.props.title }</h1>
+      <h1>{ this.props.title }</h1>
     )
   }
 }
@@ -66,7 +66,7 @@ class DateTime extends React.Component {
 
   render () {
     return (
-      <div className="date-time">
+      <div>
         <h2>{ this.state.dateTime }</h2>
       </div>
     )

@@ -42,8 +42,8 @@ function Title (props) {
   const [title, setTitle] = useState(props.title);
 
   return (
-    <div className="warpper">
-      <h1 className="text">{ title }</h1>
+    <div>
+      <h1>{ title }</h1>
       <button onClick={ () =>  setTitle('This is my Component')}>Click</button>
     </div>
   )

@@ -50,8 +50,8 @@ class Home extends React.Component {
         JSX 遵循 JS 的命名规范使用 camelCase 小驼峰形式
         class => className   tabindex => tabIndex
       */
-      <div className="warpper">
-        <p className="text">
+      <>
+        <p>
           { 
             /* 插值表达式 */
             this.state.openStatus ? 'open status' : 'close status'
@@ -67,7 +67,13 @@ class Home extends React.Component {
         <button onClick={ this.stateChange.bind(this) }>
           { this.state.openStatus ? 'Close' : 'Open' }
         </button>
-      </div>
+      </>
+      /*
+        React.Fragment 组件
+        本质上就是通过 document.createDocumentFragment() 创建文档碎片
+        短语法使用 <></> 方式，不支持 key 值
+        Fragment 除了 key 属性，不支持其他任何属性
+      */
     )
   }
 }

@@ -1,6 +1,6 @@
 class Loading extends React.Component {
   render () {
-    return <h1>Loading...</h1>;
+    return <h1>Loading...</h1>
   }
 }
 

@@ -44,7 +44,7 @@ class UserNameInput extends React.Component {
           />
         </div>
       </div>
-    );
+    )
   }
 }
 
@@ -74,7 +74,7 @@ class App extends React.Component {
           usernameChange={ this.userNameChange.bind(this) }
         />
       </div>
-    );
+    )
   }
 }
 

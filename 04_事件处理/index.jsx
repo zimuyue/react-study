@@ -27,14 +27,23 @@ class App extends React.Component {
     给子组件属性传递函数的时候，每次都会创建一个新的箭头函数
     会造成子组件不必要的渲染，触发 render 函数
   */
- 
-  // doSth (event) {
-  //   console.log('SBE:', event);
-  // }
+  state = {
+    count: 0
+  }
 
-  doSth = (event) => {
+  handleAddCount () {
+    this.setState({
+      count: ++this.state.count
+    })
+  }
+ 
+  doSth (event) {
     console.log('SBE:', event);
   }
+
+  // doSth = (event) => {
+  //   console.log('SBE:', event);
+  // }
   
   render () {
     return (
@@ -42,8 +51,25 @@ class App extends React.Component {
         {/* <button onClick={ this.doSth.bind(this) }>Click</button> */}
         {/* <button onClick={ () => this.doSth()}>Click</button> */}
         {/* <Title fn={ () => this.doSth() } /> */}
-        <button onClick={ this.doSth }>Click</button>
+        {/* <button onClick={ this.doSth }>Click</button> */}
+        <button onClick={ this.handleAddCount.bind(this) }>Count++</button>
+        <MyButton handleClick={ (e) => this.doSth(e) }>Click</MyButton>
       </div>
+    )
+  }
+}
+
+class MyButton extends React.Component {
+  constructor (props) {
+    super(props);
+  }
+
+  render () {
+    console.log('MyButton render');
+    return (
+      <button onClick={ (e) => this.props.handleClick(e) }>
+        { this.props.children }
+      </button>
     )
   }
 }

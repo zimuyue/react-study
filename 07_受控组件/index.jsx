@@ -94,7 +94,7 @@ class App extends React.Component {
           <p>
             <select 
               name="gender"
-              value={ gender }
+              defaultValue={ gender }
               onChange={ this.handleChange.bind(this) }
             >
               <option value="male">男</option>

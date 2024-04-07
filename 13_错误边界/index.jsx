@@ -23,7 +23,6 @@
     info 组件引发错误相关的信息，组件栈
   边界错误组件捕获异常，并进行后续处理，在组件抛出错误后调用
   错误信息获取，运行副作用操作
-  
 */
 
 class ErrorBoundary extends React.Component {
@@ -31,7 +30,7 @@ class ErrorBoundary extends React.Component {
     hasError: false
   }
 
-  static getDerivedStateFromError (error) {
+  static getDerivedStateFromError () {
     return { hasError: true };
   }
 
