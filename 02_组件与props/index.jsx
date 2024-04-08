@@ -1,6 +1,10 @@
 const { useState } = React;
 
 /*
+  props
+  属性池，外部调用组件时传入的属性集合，组件内部可读不可写
+  遵循单向数据流，子组件无法直接去更改父组件传递的 props
+
   组件渲染的过程
   1. React 主动调用 Title 组件
   2. 将属性集合转换对象 props => { title: 'This is a Class Component.' }
@@ -25,14 +29,6 @@ class App extends React.Component {
     )
   }
 }
-
-/*
-  属性 props 和数据/状态 state 区别
-  1. state => 数据池 {} 组件内部的管理数据的容器，组件内部可写可读
-  2. props => 属性池 {} 外部调用组件时传入的属性集合，组件内部可读不可写
-
-  组件外部的数据 -> 组件内部时应该有权限修改的 -> 单向数据流
-*/
 
 /*
   函数组件一定要是一个纯函数，纯函数能保证绝对的复用性

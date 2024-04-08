@@ -1,12 +1,15 @@
 /*
   代码分割
-  项目打包是整体打包成一个 bundle 的一个 JS 文件
-  有些边缘性的代码、模块是加载的时候不需要，分割出来单独形成一个文件块 chunk
+  项目打包是整体打包成一个 bundle.js 文件
+  有些边缘性的代码、模块加载的时候是不需要
+  将这些内容分割出来单独形成一个文件块 chunk
 
   好处是：模块懒加载、减少应用体积、减少加载时的体积
 
   模块 ES module ES6 import export
-  import 用来导入模块，import 是 ES6 模块化的一个关键字，不是函数
+  import 用来导入模块，是 ES6 模块化的一个关键字，注意它不是函数
+  类似于 typeof - typeof()
+
   静态导入(static import) import xxx from 'xxx' 导入的模块会被编译后加载
   动态导入(dynamic import) import('') 根据条件或按需的模块导入
 

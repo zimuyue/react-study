@@ -1,4 +1,4 @@
-// import listHoc from './listHoc';
+import ListHoc from './ListHoc';
 
 class StudentList extends React.Component {
   render () {
@@ -29,8 +29,8 @@ class StudentList extends React.Component {
           }
         </tbody>
       </table>
-    );
+    )
   }
 }
 
-export default StudentList;
+export default ListHoc(StudentList);

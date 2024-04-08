@@ -2,6 +2,10 @@
   React 是构建 JS 页面的库，只关注于 View 层的渲染
   仅仅只是一个视图渲染的工具，并非是框架，不关注于 Modal 层的问题
 
+  React 提供了 JSX 标签语法，是对 JS 进行的语法扩展
+  不是字符串也不是 HTML 标签，用来直接生成 React 元素
+  React 认为 UI 视图与逻辑是具备耦合性的，所以设计使用 JSX 语法来编写各种组件页面
+
   npx npm5.2+ 包运行工具
   create-react-app 内部工程化 babel/webpack
 */
@@ -35,45 +39,21 @@ class Home extends React.Component {
     //   'This is my first React experience'
     // )
 
-    /*
-      JSX
-      1. 一种标签语法，对 JS 进行的语法扩展
-      2. 不是字符串也不是 HTML 标签
-      3. 描述 UI 呈现与交互的直观的表现形式
-      4. 用来生成 React 元素
-    */
     return (
       /*
-        React 认为 UI 视图与逻辑是具备耦合性的
-        所以设计使用 JSX 语法来编写各种组件页面
-
-        JSX 遵循 JS 的命名规范使用 camelCase 小驼峰形式
-        class => className   tabindex => tabIndex
+        React.Fragment 组件
+        本质上就是通过 document.createDocumentFragment() 创建文档碎片
+        短语法使用 <></> 方式，这种写法不支持 key 值
+        Fragment 除了 key 属性，不支持其他任何属性
       */
       <>
         <p>
-          { 
-            /* 插值表达式 */
-            this.state.openStatus ? 'open status' : 'close status'
-          }
+          { this.state.openStatus ? 'open status' : 'close status' }
         </p>
-        {
-          /* 
-            onClick 绑定的事件函数触发时，指向的是事件源
-            所以要通过 bind 方法指定为当前实例对象
-            或者直接在定义方式时，使用箭头函数来指定 this
-          */
-        }
         <button onClick={ this.stateChange.bind(this) }>
           { this.state.openStatus ? 'Close' : 'Open' }
         </button>
       </>
-      /*
-        React.Fragment 组件
-        本质上就是通过 document.createDocumentFragment() 创建文档碎片
-        短语法使用 <></> 方式，不支持 key 值
-        Fragment 除了 key 属性，不支持其他任何属性
-      */
     )
   }
 }
