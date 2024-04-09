@@ -4,7 +4,7 @@
   forwardRef 接收一个渲染函数作为参数，并创建一个 React 组件
   渲染函数中具备两个参数 props 与 ref
 
-  父组件向 forwardRef 组件绑定 ref 值
+  父组件向 forwardRef 返回的组件绑定 ref 值
   通过 forwardRef 向子组件内转发 ref 属性
   ref 参数只能用 forwardRef 定义的组件内接收
 */

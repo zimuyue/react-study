@@ -1,5 +1,5 @@
 // React@16.2及以下版本使用 refs 转发机制
-// 直接传递过于暴力
+// 直接传递过于暴力，破坏了组件的封装性和复用性，使父子组件更加耦合
 function MyInput (props) {
   return <input type='text' ref={ props.inputRef } />
 }
