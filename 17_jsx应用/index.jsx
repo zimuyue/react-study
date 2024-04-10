@@ -5,8 +5,8 @@
 
 // JSX 点语法
 const MyUI = {
-  Button: class Button extends React.Component {
-    static colorSystem = {
+  Button: class extends React.Component {
+    colorSystem = {
       'primary': 'blue',
       'success': 'green',
       'warning': 'orange',
@@ -15,7 +15,7 @@ const MyUI = {
     render () {
       const { type, children } = this.props;
       return (
-        <button type={ Button.colorSystem[type] }>{ children }</button>
+        <button type={ this.colorSystem[type] }>{ children }</button>
       )
     }
   },

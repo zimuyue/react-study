@@ -1,23 +1,10 @@
 /*
   state
   用来描述组件状态，又可以称为数据池
+  props 和 state 更新数据要谨慎
+  尽量避免直接依赖他们，很有可能是在异步程序中更新
 
-  注意事项
-  1. state 必须是由 setState 方式来更新状态
-  2. 多个 setState 是会合并调用
-  3. props 和 state 更新数据要谨慎，尽量避免直接依赖他们，很有可能是在异步程序中更新
-  4. setState 操作合并的原理，内部存在优化采用浅合并，仅更新发生变化的数据值，保留原对象
-
-  this.setState({
-    result: this.state.result + fthis.props.content
-  })
-
-  this.setState((state, props) => {
-    // state 上一个 state
-    // props 此次更新时被使用的 props
-    result: state.result + props.content
-  })
-
+  浅合并
   在更新 state 数组引用时 React 是无法检测到原数组修改值变化的 push/unshift...
   所以在更新数组状态时，要设置一个新数组，确保 React 能够正确地检测到状态的更改并触发重新渲染
 
