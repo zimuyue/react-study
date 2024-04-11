@@ -11,7 +11,6 @@
   通过 React.createRef() 创建 ref 对象
   通过元素的 ref 属性可以附加到 React 元素上
   通常在构造器中给 this 上的属性赋值一个 ref 方便整个组件使用
-  ref 只要传递 React 元素中，就可以利用 ref 的 current 属性访问到该真实 DOM 节点
   ref 在 componentDidMount 和 componentDidUpdate 触发前更新
 
   ref 有不同的使用方式

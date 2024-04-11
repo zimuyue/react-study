@@ -1,20 +1,22 @@
 /*
   setState
-  1. 执行后通知 React 内部使用更新后的 state 重新渲染组件树
-  2. 执行会延迟，更新 state 会延迟且渲染，合并多次 setState 行为后再进行更新渲染
-  3. 它是靠异步任务实现批处理 Batching
-
-  setState(updater, callback)
-  updater  会与现有的 state 进行浅合并如 Object.assign
-  callback 会在 state 合并且重新渲染完组件后执行，等同于 componentDidUpdate
+  通过 setState 去更新组件内部 state
+  setState 接收两个参数 updater 与 callback
+  其中 updater 参数类型可以是对象也可以是函数
+  1. 如果是对象的方式将参数对象与老的组件 state 进行浅合并
+      等同于 Object.assign
+  2. 如果是回调函数的方式，回调函数参数可以获取到上一次 prevState 值
+      回调函数的返回值与组件 state 进行浅合并
   
-  多次调用 setState 触发的 callback 回调函数也是会进行合并后执行的
+  callback 作为第二个参数，会在 state 合并后并且重新渲染完组件后执行
+  等同于 componentDidUpdate
+  多次调用 setState 触发的 callback 回调函数合并后统一执行
 
-  参数保证是最新的，返回值与 state 进行浅合并
-  在回调内访问 state 可以获取到上一次的 state 值
-  setState((prevState, prevProps) => {
-    return { count: 1 }
-  })
+  state 状态必须是由 setState 方法来更新
+  确保 React 能够正确的追踪状态的变化并触发组件的重新渲染
+  setState 采取异步更新策略，将多个 setState 执行结果合并更新，减少不必要的重复渲染
+  如果是直接更改 state 状态 React 是无法感知到 state 变化
+  导致组件无法触发重新渲染更新视图
 */
 
 class App extends React.Component {

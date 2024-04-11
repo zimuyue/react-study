@@ -16,9 +16,9 @@
   
   服务端渲染时使用动态组件库 Loadable Components
 */
-import Loading from './components/Loading';
+import Loading from './Loading';
 
-const Main = React.lazy(() => import('./components/Main'));
+const Main = React.lazy(() => import('./Main'));
 
 class App extends React.Component {
   render () {

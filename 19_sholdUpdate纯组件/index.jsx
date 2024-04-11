@@ -1,15 +1,9 @@
 /*
   React.PureComponent
-  纯组件本身也是继承于 React.Component
-
-  React 组件渲染过程
-  1. 执行 render 函数
-  2. 返回 JSX 编译成 React 元素挂载到 React 节点树上
-  3. 转换虚拟 DOM 新老虚拟节点对比优化替换节点内容
-
+  纯组件是继承于 React.Component
   PureComponent 内部是将 props 数据新旧对比
-  老的数据与新的数据不同时，才会调用 render 函数
-  对比的方式是浅层对比，需要区分基本类型与引用类型
+  采取浅层对比方式，老的数据与新的数据不同时，才会调用 render 函数
+  如果是引用类型数据，对比的是引用地址是否相同
 
   PureComponent 内部实现了 sholdComponentUpdate 函数
 */
@@ -32,7 +26,7 @@ class App extends React.Component {
       count: 0
     })
 
-    // 强制 PureComponent 更新
+    // forceUpdate 强制 PureComponent 更新
     this.pureCompRef.current.forceUpdate(() => {
       console.log('PureComp render invoked')
     })

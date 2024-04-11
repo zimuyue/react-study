@@ -1,5 +1,5 @@
 /*
-  JSX 其实是 React.createElement 函数调用的语法糖
+  JSX 是 React.createElement 函数调用的语法糖
   React 对 JSX 语法底层编译成 React.createElement 调用形式
 */
 

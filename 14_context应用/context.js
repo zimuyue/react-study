@@ -1,6 +1,6 @@
 /*
   React.createContext(defaultValue)
-  React 提供的一种方法，用于给整个组件树创建共享全局的数据
+  用于给整个组件树创建共享全局的数据
   通过创建上下文对象，提供两个组件 Provider 与 Consumer
 
   <ThemeContext.Provider> 提供方 -> 必须使用 value props 来提供数据

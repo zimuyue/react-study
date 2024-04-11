@@ -1,5 +1,6 @@
 /*
-  ReactDOM.createPortal 传送门(vue teleport)
+  ReactDOM.createPortal 传送门
+  等同于 vue teleport
   将一个节点传送到任意的节点中去，例如模态框
 */
 
