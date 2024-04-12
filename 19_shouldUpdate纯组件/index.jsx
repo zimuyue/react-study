@@ -5,7 +5,7 @@
   采取浅层对比方式，老的数据与新的数据不同时，才会调用 render 函数
   如果是引用类型数据，对比的是引用地址是否相同
 
-  PureComponent 内部实现了 sholdComponentUpdate 函数
+  PureComponent 内部实现了 shouldComponentUpdate 函数
 */
 
 import PureComp from './PureComp';

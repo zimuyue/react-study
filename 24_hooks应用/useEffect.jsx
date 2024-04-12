@@ -21,7 +21,7 @@ export default function () {
   // 组件挂载完毕后执行一次，同时数据更新时执行
   // 不安全的写法，导致组件渲染逻辑不清晰
   React.useEffect(() => {
-    console.log('componentDidMount + initial render');
+    console.log('componentDidUpdate + initial render');
   })
 
   // 依赖项更新时，触发回调执行

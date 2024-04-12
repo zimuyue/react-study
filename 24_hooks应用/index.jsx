@@ -22,17 +22,23 @@
 import Comp1 from "./useState";
 import Comp2 from "./useReducer";
 import Comp3 from "./useEffect";
+import Comp4 from "./useMemo";
+import Comp5 from "./useCallback";
 
 function App () {
   return (
     <div>
-      <Comp1 />
+      {/* <Comp1 />
       <hr />
       <Comp2 />
       <hr />
       <Comp3 />
       <hr />
       <button onClick={ () => root.unmount() }>APP DISTORY</button>
+      <hr />
+      <Comp4 /> */}
+      <hr />
+      <Comp5 />
     </div>
   )
 }
