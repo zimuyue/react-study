@@ -9,14 +9,10 @@
   useCallback 缓存方法
   useRef      获取节点实例
 
-  hook 钩子函数
-  帮助函数创建一些外部的数据源
-  帮助函数与外界进行沟通联络
-
-  通过 hook 钩到视图相关的数据源，当数据变化时，指示渲染函数重新执行
-  钩数据源的过程就是分析视图代码的过程，让视图与数据源相关联
-
-  hook 应该在函数最顶层使用遵循顺序调用，不能在类组件中使用
+  钩子函数
+  帮助函数创建一些外部的数据源，使函数与外界进行沟通联络
+  通过 hooks 钩到视图相关的数据源，当数据变化时，指示渲染函数重新执行
+  hooks 应该在函数最顶层使用遵循顺序调用，不能在类组件中使用
 */
 
 import Comp1 from "./useState";
@@ -24,6 +20,9 @@ import Comp2 from "./useReducer";
 import Comp3 from "./useEffect";
 import Comp4 from "./useMemo";
 import Comp5 from "./useCallback";
+import Comp6 from "./useContext";
+import Comp7 from "./useRef";
+import Comp8 from "./useLayoutEffect";
 
 function App () {
   return (
@@ -37,8 +36,14 @@ function App () {
       <button onClick={ () => root.unmount() }>APP DISTORY</button>
       <hr />
       <Comp4 /> */}
+      {/* <hr />
+      <Comp5 /> */}
+      {/* <hr />
+      <Comp6 /> */}
+      {/* <hr />
+      <Comp7 /> */}
       <hr />
-      <Comp5 />
+      <Comp8 />
     </div>
   )
 }

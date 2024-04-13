@@ -62,7 +62,8 @@ export function useEffect (cb, depArr) {
   }
 
   if (depArr === undefined) {
-    return cb();
+    setTimeout(cb, 0);
+    return;
   }
 
   if (!Array.isArray(depArr)) {
@@ -74,11 +75,40 @@ export function useEffect (cb, depArr) {
   true;
 
   if (isChanged) {
-    cb();
+    setTimeout(cb, 0);
   }
 
   effectDepArr[effectIndex] = depArr;
   effectIndex ++;
+}
+
+const layoutEffectDepArr = [];
+let layoutEffectIndex = 0;
+
+export function useLayoutEffect (cb, depArr) {
+  if (typeof cb !== 'function') {
+    throw new Error('Callback must be a function.');
+  }
+
+  if (depArr === undefined) {
+    queueMicrotask(cb);
+    return;
+  }
+
+  if (!Array.isArray(depArr)) {
+    throw new TypeError('Dependencies must be contained is an Array.');
+  }
+
+  const isChanged = layoutEffectDepArr[layoutEffectIndex] ? 
+  depArr.some((dep, index) => dep !== layoutEffectDepArr[layoutEffectIndex][index]) :
+  true;
+
+  if (isChanged) {
+    queueMicrotask(cb);
+  }
+
+  layoutEffectDepArr[layoutEffectIndex] = depArr;
+  layoutEffectIndex ++;
 }
 
 class PrueComponent extends React.Component {
@@ -183,6 +213,29 @@ export function useCallback (cb, depArr) {
     callbackDepArr[callbackIndex ++] = [ cb, depArr ];
     return cb;
   }
+}
+
+export function createContext (defaultState) {
+  const ctx = {
+    Provider,
+    Consumer
+  }
+
+  function Provider (props) {
+    ctx._currentValue = ctx._currentValue || defaultState;
+    Object.assign(ctx._currentValue, props.value);
+    return props.children;
+  }
+
+  function Consumer (props) {
+    return props.children(props);
+  }
+
+  return ctx;
+}
+
+export function useContext (context) {
+  return context._currentValue;
 }
 
 async function render () {

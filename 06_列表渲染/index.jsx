@@ -13,7 +13,7 @@
   3. 使用动态生成一个静态 ID  nanoid库
 */
 
-import { nanoid } from 'nanoid';
+import { nanoid } from 'https://cdn.jsdelivr.net/npm/nanoid@5.0.7/index.browser.js';
 
 class App extends React.Component {
   state = {
@@ -60,7 +60,7 @@ class ListItem extends React.Component {
   // key 是不会作为属性传递给子组件的，必须显示传递 key 值
   // 防止开发者在逻辑中对 key 值进行操作
   render () {
-    console.log(this.props.key);
+    // console.log(this.props.key);
     const { name, sid } = this.props;
     return <li>{ sid + ' ' + name }</li>
   }

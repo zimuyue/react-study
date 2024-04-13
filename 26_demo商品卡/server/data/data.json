@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "华为Mate60pro",
+    "price": 6999.00,
+    "image": "https://picsum.photos/200/300",
+    "intro": "卫星电话,无地面网络,仍可收听接打卫星电话;纵横四海,常联九霄,灵犀通信,遥遥领先!",
+    "max_order": 1,
+    "hot": true,
+    "high": true
+  },
+  {
+    "id": 2,
+    "name": "华为Mate20pro",
+    "price": 2999.00,
+    "image": "https://picsum.photos/200/300",
+    "intro": "卫星电话,无地面网络,仍可收听接打卫星电话;纵横四海,常联九霄,灵犀通信,遥遥领先!",
+    "max_order": 1,
+    "hot": true,
+    "high": true
+  },
+  {
+    "id": 3,
+    "name": "华为Mate30pro",
+    "price": 3999.00,
+    "image": "https://picsum.photos/200/300",
+    "intro": "卫星电话,无地面网络,仍可收听接打卫星电话;纵横四海,常联九霄,灵犀通信,遥遥领先!",
+    "max_order": 1,
+    "hot": true,
+    "high": true
+  },
+  {
+    "id": 4,
+    "name": "华为Mate40pro",
+    "price": 4999.00,
+    "image": "https://picsum.photos/200/300",
+    "intro": "卫星电话,无地面网络,仍可收听接打卫星电话;纵横四海,常联九霄,灵犀通信,遥遥领先!",
+    "max_order": 1,
+    "hot": true,
+    "high": true
+  },
+  {
+    "id": 5,
+    "name": "华为Mate50pro",
+    "price": 5999.00,
+    "image": "https://picsum.photos/200/300",
+    "intro": "卫星电话,无地面网络,仍可收听接打卫星电话;纵横四海,常联九霄,灵犀通信,遥遥领先!",
+    "max_order": 1,
+    "hot": true,
+    "high": true
+  }
+]
