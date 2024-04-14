@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 class Get extends React.Component {
   constructor (props) {
     super(props);

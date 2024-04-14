@@ -13,7 +13,7 @@ export default function () {
   const [ count, dispatch ] = React.useReducer(reducer, 0);
 
   // state => count
-  // action => { type, playload }
+  // action => { type, payload }
   function reducer (state, action) {
     switch (action.type) {
       case 'PLUS':

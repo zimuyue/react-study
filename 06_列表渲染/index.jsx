@@ -13,7 +13,7 @@
   3. 使用动态生成一个静态 ID  nanoid库
 */
 
-import { nanoid } from 'https://cdn.jsdelivr.net/npm/nanoid@5.0.7/index.browser.js';
+import { nanoid } from 'nanoid';
 
 class App extends React.Component {
   state = {
