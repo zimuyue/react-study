@@ -1,3 +1,3 @@
 # react-study
 
-React 深入学习
+React in depth study
