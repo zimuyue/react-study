@@ -3,13 +3,6 @@ class Component {
     this.callbackQueue = [];
     this.timer = null;
   }
-  /*
-    将 setState 的参数进行记录
-    与组件内部 state 进行 Object.assign 浅合并
-    开启计时器采取异步更新策略，多次调用时清除上一次任务
-    将多次调用的结果合并，同时开启一个队列记录 callback
-    在最后一次调用 setState 时批量触发
-  */
   setState (stateChange, callback) {
     const state = Object.assign({}, this.state, stateChange);
     this.callbackQueue.push(callback);
@@ -25,7 +18,6 @@ class Component {
       this.callbackQueue.forEach(cb => cb());
     }, 0);
   }
-
   updateView (state) {
     console.log('Updated', state);
   }

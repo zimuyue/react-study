@@ -3,21 +3,15 @@
   两个组件（无父子关系）同享一个数据并且同步数据变化
   类组件调用（实例化）的时候，组件内部的状态是唯一且独立的
   将状态统一提升到共同的父级组件，统一管理
-
-  单向数据流
-  数据的流动是由父向子流动，通过 props 向下传递
-  props 是只读数据，数据操作由父组件来完成，数据由父组件管理
 */
 
 class Info extends React.Component {
-
   lengthReg () {
     const { username: { length } } = this.props;
     const isLess12 = length <= 12 ? '长度合法' : '长度必须小于12';
     const isGreater6 = length >= 6 && isLess12;
     return length < 6 ? '长度必须大于等于6位' : isGreater6;
   }
-
   render () {
     return (
       <div>
@@ -50,7 +44,6 @@ class UserNameInput extends React.Component {
 }
 
 class App extends React.Component {
-  
   state = {
     username: ''
   }

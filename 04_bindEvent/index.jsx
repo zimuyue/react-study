@@ -5,9 +5,6 @@
   React 底层对事件对象进行了包装
   属于合成基础事件对象 SyntheticBaseEvent
   SBE 是遵守 W3C 事件对象规范的，不存在任何浏览器的兼容性问题
-
-  React 认为事件处理跟视图是有程序上的直接关系
-  事件处理和视图写在一起可以更加直观的表述视图与逻辑的关系，更容易维护
 */
 
 class App extends React.Component {
@@ -24,9 +21,9 @@ class App extends React.Component {
     1. bind(this) - 构造器
     2. bind(this) - 视图标记中
     3. 视图中回调 + 箭头函数
-    但是 render 函数每次执行的时候，都会传递新的回调
-    给子组件属性传递函数的时候，每次都会创建一个新的箭头函数
-    会造成子组件不必要的渲染，触发 render 函数
+    但是 render 函数每次执行的时候
+    给子组件属性传递函数，每次都会创建一个新的箭头函数
+    造成子组件不必要的渲染
   */
   state = {
     count: 0
@@ -50,7 +47,7 @@ class App extends React.Component {
     return (
       <div>
         {/* <button onClick={ this.doSth.bind(this) }>Click</button> */}
-        {/* <button onClick={ () => this.doSth()}>Click</button> */}
+        {/* <button onClick={ () => this.doSth() }>Click</button> */}
         {/* <Title fn={ () => this.doSth() } /> */}
         {/* <button onClick={ this.doSth }>Click</button> */}
         <button onClick={ this.handleAddCount.bind(this) }>Count++</button>

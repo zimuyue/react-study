@@ -4,13 +4,15 @@ const { useState } = React;
   props
   属性池，外部调用组件时传入的属性集合，组件内部可读不可写
   遵循单向数据流，子组件无法直接去更改父组件传递的 props
+  props 是只读数据，数据操作由父组件来完成，数据由父组件管理
 
   组件渲染的过程
-  1. React 主动调用 Title 组件
-  2. 将属性集合转换对象 props => { title: 'This is a Class Component.' }
-  3. 将对象作为 props 传入组件
-  4. 替换 JSX 中的 props 或者 state 中的变量
-  5. ReactDOM 将最终的 React 元素通过一系列操作转换成真实 DOM 进行渲染
+  当一个组件被使用时 React 会调用这个组件，触发组件的渲染
+  如果是类组件则调用 render 函数，如果是函数式组件则执行函数
+  将函数执行的结果作为描述当前组件的 React 元素，React 会根据
+  组件创建的 React 元素去创建虚拟 DOM 树，进行虚拟 DOM 与真实 DOM 对比
+  进行差异化更新，最终渲染真实 DOM，调用类组件 componentDidMount 或者 componentDidUpdate
+  组件呈现，如果组件内 state 发生变更，重复这个操作过程
 */
 class App extends React.Component {
   constructor (props) {
@@ -40,7 +42,7 @@ function Title (props) {
   return (
     <div>
       <h1>{ title }</h1>
-      <button onClick={ () =>  setTitle('This is my Component')}>Click</button>
+      <button onClick={() =>  setTitle('This is my Component')}>Click</button>
     </div>
   )
 }

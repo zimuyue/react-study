@@ -1,13 +1,7 @@
 /*
-  React 是构建 JS 页面的库，只关注于 View 层的渲染
+  React 是一个构建 JS 页面的库，只关注于 View 层的渲染
   仅仅只是一个视图渲染的工具，并非是框架，不关注于 Modal 层的问题
-
   React 提供了 JSX 标签语法，是对 JS 进行的语法扩展
-  不是字符串也不是 HTML 标签，用来直接生成 React 元素
-  React 认为 UI 视图与逻辑是具备耦合性的，所以设计使用 JSX 语法来编写各种组件页面
-
-  npx npm5.2+ 包运行工具
-  create-react-app 内部工程化 babel/webpack
 */
 
 console.log('React:', React);

@@ -1,5 +1,5 @@
 /*
-  高阶组件 HOC 高级的设计模式 High Order Component
+  高阶组件 HOC 高级的设计模式 Higher Order Component
   当两个组件具备相同的行为，为了避免这种代码的冗余
   可以使用包裹组件，将两个组件相似性的行为合并
   通过 props 将行为进行传递给这两个组件
