@@ -1,3 +1,3 @@
-# react-study
+# react
 
 React in depth study

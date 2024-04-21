@@ -10,7 +10,7 @@ export default defineConfig({
     alias: [
       {
         find: '@',
-        replacement: resolve(__dirname, '/26_demo商品')
+        replacement: resolve(__dirname, '/25_demo')
       }
     ]
   }
