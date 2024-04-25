@@ -8,9 +8,9 @@
   如果包含了副作用操作，就会造成应用的操作混乱，发生不可控的情况
   
   constructor
-  componentWillMount
-  componentWillReceiveProps
-  componentWillUpdate
+  UNSAFE_componentWillMount
+  UNSAFE_componentWillReceiveProps
+  UNSAFE_componentWillUpdate
   getDerivedStateFromProps
   shouldComponentUpdate
   render

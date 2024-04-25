@@ -8,10 +8,10 @@
   通过 children 或者是传递视图 React 元素的方式完全可以解决组件组合的问题
   props 可以传递任何类型的数据，所以组合的方式可以替代继承方案
 
-  1. 如果 Container 内部有内容, React 会在 props 内部增加 children 属性
-  2. 如果 Container 内部有非元素内容，children: 非元素内容
-  3. 如果 Container 内部有单个元素内容，children: React元素对象
-  4. 如果 Container 内部有多个元素内容，children: [...(React元素对象)]
+  1.如果 Container 内部有内容, React 会在 props 内部增加 children 属性
+  2.如果 Container 内部有非元素内容，children: 非元素内容
+  3.如果 Container 内部有单个元素内容，children: React元素对象
+  4.如果 Container 内部有多个元素内容，children: [...(React元素对象)]
 */
 
 import styles from './index.module.css';

@@ -13,10 +13,10 @@
   获取捕获错误，修改错误状态
 
   无法捕获的场景
-  1. 事件处理函数
-  2. 异步代码 setTimeout ajax
-  3. 服务端渲染
-  4. 错误边界组件内部有错误
+  1.事件处理函数
+  2.异步代码 setTimeout ajax
+  3.服务端渲染
+  4.错误边界组件内部有错误
 
   componentDidCatch(error, info)
   参数：

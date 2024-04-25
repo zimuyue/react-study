@@ -24,8 +24,8 @@ class App extends React.Component {
 
   /*
     受控组件
-    1. state 是表单控件的唯一的数据源
-    2. 控制表单的操作并同步给 state
+    1.state 是表单控件的唯一的数据源
+    2.控制表单的操作并同步给 state
   */ 
   state = {
     username: '',

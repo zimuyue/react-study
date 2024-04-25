@@ -2,11 +2,11 @@
   refs 允许访问真实 DOM 进行操作
 
   应用场景
-  1. 管理 input 的焦点聚焦
-  2. 音视频媒体管理
-  3. 设置强制动画
-  4. 集成第三方 DOM 库 jquery
-  5. 模态框
+  1.管理 input 的焦点聚焦
+  2.音视频媒体管理
+  3.设置强制动画
+  4.集成第三方 DOM 库 jquery
+  5.模态框
 
   通过 React.createRef() 创建 ref 对象
   通过元素的 ref 属性可以附加到 React 元素上
@@ -14,9 +14,9 @@
   ref 在 componentDidMount 和 componentDidUpdate 触发前更新
 
   ref 有不同的使用方式
-  1. 在 html 元素中 current 是真实 DOM 节点
-  2. 在 class 组件中 current 是组件实例
-  3. 在函数组件中没有实例对象，附加不到组件上
+  1.在 html 元素中 current 是真实 DOM 节点
+  2.在 class 组件中 current 是组件实例
+  3.在函数组件中没有实例对象，附加不到组件上
 */
 class Modal extends React.Component {
   constructor (props) {

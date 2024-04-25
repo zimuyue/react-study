@@ -8,9 +8,9 @@
   所以仅在操作列表时，不建议使用 index 做为 key 值
   如果是静态渲染列表，后续不会产生操作时，可以使用 index 方式
 
-  1. 尽量避免使用 index
-  2. 可以用数据中的 ID(但有可能 ID 会变动)
-  3. 使用动态生成一个静态 ID  nanoid库
+  1.尽量避免使用 index
+  2.可以用数据中的 ID(但有可能 ID 会变动)
+  3.使用动态生成一个静态 ID nanoid库
 */
 
 import { nanoid } from 'nanoid';

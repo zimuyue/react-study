@@ -18,9 +18,9 @@ class App extends React.Component {
     ES6 class 模块默认是不对事件处理函数进行 this 再绑定的
 
     解决 this 指向的办法
-    1. bind(this) - 构造器
-    2. bind(this) - 视图标记中
-    3. 视图中回调 + 箭头函数
+    1.bind(this) - 构造器
+    2.bind(this) - 视图标记中
+    3.视图中回调 + 箭头函数
     但是 render 函数每次执行的时候
     给子组件属性传递函数，每次都会创建一个新的箭头函数
     造成子组件不必要的渲染

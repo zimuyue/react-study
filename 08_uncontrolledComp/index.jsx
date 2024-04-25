@@ -1,7 +1,7 @@
 /*
   非受控组件
-  1. 表单数据状态不受 state 控制
-  2. 使用 React ref 从 DOM 节点中获取表单数据的组件
+  1.表单数据状态不受 state 控制
+  2.使用 React ref 从 DOM 节点中获取表单数据的组件
 */
 class App extends React.Component {
   constructor (props) {
